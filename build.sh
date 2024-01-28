@@ -25,17 +25,17 @@ echo "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
 
 echo "\n\n${GREEN}► Updating packages\n${NOCOLOR}"
 
-pkg upgrade && apt update
+pkg upgrade && apt update -y
 clear
 
 echo "\n\n${GREEN}► Installing NodeJs\n${NOCOLOR}"
 
-pkg install nodejs
+pkg install nodejs -y
 clear
 
 echo "\n\n${GREEN}► Installing Python\n${NOCOLOR}"
 
-pkg install python3
+pkg install python3 -y
 clear
 
 echo "\n\n${GREEN}▬▬▬▬▬▬▬▬▬▬▬ INSTALL FINISHED ▬▬▬▬▬▬▬▬▬▬▬\n\n${NOCOLOR}"
