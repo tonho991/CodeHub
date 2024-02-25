@@ -24,37 +24,37 @@ echo -e  "▮ﾠﾠ${BLUE}CodeHub ${PURPLE}Install ${YELLOW}Packages${NOCOLOR}"
 echo -e  "▮"
 echo -e  "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
 
-echo -e  "\n\n${GREEN}► Updating packages\n${NOCOLOR}"
+echo -e  "\n\n${GREEN}► Atualizando pacotes...\n${NOCOLOR}"
 pkg upgrade -y && apt update -y
 clear
 
 
-echo -e  "${GREEN}►Select languages to install:\n${NOCOLOR}"
+echo -e  "${GREEN}►Selecione linguagens para ser instalada:\n${NOCOLOR}"
 echo -e  "${BLUE}1- Python${NOCOLOR}"
 echo -e  "${BLUE}2- Node${NOCOLOR}"
 echo -e  "${BLUE}3- C${NOCOLOR}"
 echo -e  "${BLUE}4- C++${NOCOLOR}"
 echo -e  "${BLUE}5- C#${NOCOLOR}"
 echo -e  "\n"
-echo -e  "Enter numbers separated by commas \",\" (e.g., 1,2,4)"
-echo -e  -n "\n${GREEN}► Languages: ${NOCOLOR}"
+echo -e  "Digite o número da linguagem separada por vírgula (e.g., 1,2,4)"
+echo -e  -n "\n${GREEN}► ${NOCOLOR}"
 
 read languages
 
-echo -e  "\n${GREEN}► Languages selected: $languages${NOCOLOR}\n"
+echo -e  "\n${GREEN}► Linguagens selecionadas: $languages${NOCOLOR}\n"
 
 IFS=','
 read -ra selected_languages <<< "$languages"
 
 for lang in "${selected_languages[@]}"; do
     case $lang in
-        1) echo -e  "\n\n${GREEN}► Installing Python\n${NOCOLOR}"
+        1) echo -e  "\n\n${GREEN}► Instalando Python\n${NOCOLOR}"
            pkg install python3 -y
            clear ;;
-        2) echo -e  "\n\n${GREEN}► Installing NodeJs\n${NOCOLOR}"
+        2) echo -e  "\n\n${GREEN}► Instalando NodeJs\n${NOCOLOR}"
            pkg install nodejs -y
            clear ;;
-        3) echo -e  "\n\n${GREEN}► Installing C\n${NOCOLOR}"
+        3) echo -e  "\n\n${GREEN}► Instalando C\n${NOCOLOR}"
            pkg install clang -y
            clear ;;
         4) echo -e  "\n\n${GREEN}► Installing C++\n${NOCOLOR}"
